@@ -1,0 +1,27 @@
+/*space, padding, shapes*/
+$body-padding: 0 3.125em 0;
+$rounded-radius: 50%;
+$full-width: 100%;
+$small-pixel-radius: 10px;
+$pricing-padding: 4.7rem;
+$large-space-margin: 9.375rem;
+$medium-space-margin: 4.5rem;
+$brands-margin: 2.8rem;
+$button-padding: 0.8125rem;
+$buttons-rounded-radius: 50px;
+$bold-text: #0b132a;
+$smallest-rem: 1rem;
+$smallest-rem-2: 1.5rem;
+$solid-border: 1px solid #ffecec;
+$pink-shadow: rgba(245, 56, 56, 0.35);
+$blur: $pink-shadow 0 20px 30px -10px;
+/*colors*/
+$colors: (
+  "red-call-to-action": #f53838,
+  "gray-background": #ffecec,
+);
+$white: #ffffff;
+
+/*text centering*/
+$align-start: start;
+$align-center: center;

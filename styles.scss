@@ -1,0 +1,433 @@
+@import "utility.scss";
+@import "layout.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+}
+section,
+.plan,
+.hold-every-pricing-plan,
+.hold-brands,
+.center-line,
+.testimonials,
+.subscribe {
+  padding: 0 $smallest-rem 0;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+h1,
+h2,
+p {
+  margin: $smallest-rem 0 0;
+}
+.bold-text {
+  color: $bold-text;
+  font-weight: 500;
+}
+p {
+  color: #4f5665;
+}
+.column {
+  @include flex-colum;
+}
+nav {
+  @include grid;
+  padding: $smallest-rem;
+  .relative {
+    position: relative;
+  }
+  .nav-links {
+    padding: 0 $smallest-rem-2 $smallest-rem-2;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    right: 0;
+
+    .nav-link {
+      padding-bottom: 5px;
+      margin-bottom: $smallest-rem;
+      border-bottom: 1px solid map-get($colors, "gray-background");
+    }
+
+    .nav-btn {
+      margin: 0 0.2rem;
+      transition: 0.5s;
+      color: $bold-text;
+      border: 1px solid $white;
+    }
+  }
+}
+.nav-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.nav-icon-top,
+.nav-icon-middle,
+.nav-icon-bottom {
+  width: $smallest-rem-2;
+  height: 3px;
+  margin: 5px;
+  background-color: #0b132a;
+}
+.active-top,
+.un-active-bottom {
+  transform: rotate(45deg) translateY(5px) translateX(5px);
+  transition: 0.5s ease-out;
+}
+.active-middle {
+  display: none;
+}
+.active-bottom,
+.un-active-top {
+  transform: rotate(-45deg);
+  transition: 0.5s ease-out;
+}
+.toggle-nav-off {
+  animation: toggle-nav-off 0.3s forwards;
+}
+@keyframes toggle-nav-on {
+  from {
+    opacity: 0;
+    display: none;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    display: block;
+    width: 50%;
+    background-color: aliceblue;
+  }
+}
+@keyframes toggle-nav-off {
+  0% {
+    opacity: 1;
+    display: block;
+    width: 50%;
+  }
+  75% {
+    opacity: 0;
+    display: none;
+    width: 1%;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    width: 0%;
+    background-color: #ffffff;
+  }
+}
+.toggle-nav-on {
+  opacity: 1;
+  display: block;
+  width: 50%;
+  background-color: aliceblue;
+  animation: toggle-nav-on 1s;
+}
+.fixed-position {
+  position: fixed;
+}
+button {
+  border-radius: $small-pixel-radius;
+  padding: $button-padding;
+  font-weight: 500;
+  background-color: #ffffff;
+  border-radius: $buttons-rounded-radius;
+  border-color: map-get($colors, "red-call-to-action");
+}
+
+footer {
+  background: #f8f8f8;
+  padding: $medium-space-margin;
+}
+section {
+  @include flex-colum;
+  justify-content: center;
+  margin-bottom: $smallest-rem-2;
+}
+.footer-push-p {
+  margin: $smallest-rem 0;
+}
+.media img {
+  background-color: map-get($colors, "red-call-to-action");
+}
+.section-two {
+  @include flex-row;
+  margin: $smallest-rem-2 0;
+  p {
+    margin: 0;
+  }
+}
+.call-to-action {
+  background-color: map-get($colors, "red-call-to-action");
+  color: $white;
+  box-shadow: $blur;
+  border-radius: $small-pixel-radius;
+  width: $rounded-radius;
+  margin: $smallest-rem-2 0;
+}
+.hold-img-in-section img {
+  width: $full-width;
+}
+
+.middle {
+  border-left: $solid-border;
+  border-right: $solid-border;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.show-case {
+  @include auto-center;
+  @include flex-row;
+  width: 30%;
+  justify-content: center;
+
+  .contain-vector {
+    @include flex-colum;
+    padding: 0.5rem;
+    border-radius: $rounded-radius;
+    background-color: map-get($colors, "gray-background");
+    margin-right: 0.5rem;
+  }
+  p {
+    font-size: 0.82rem;
+  }
+}
+.world-map,
+.brands img {
+  width: $full-width;
+}
+.world-map {
+  margin: $smallest-rem-2 0;
+}
+.check-icon {
+  @include flex-row;
+  align-content: $align-center;
+  margin-top: 0.5rem;
+
+  p {
+    margin: 0 0 0 0.5rem;
+  }
+}
+.plan {
+  margin-bottom: $smallest-rem-2;
+  p {
+    margin-top: 0.5rem;
+  }
+}
+.box-img {
+  height: fit-content;
+}
+.hold-pricing-plan {
+  @include flex-colum;
+  border-radius: $small-pixel-radius;
+  border: 1px solid map-get($colors, "gray-background");
+  text-align: $align-center;
+  margin: 0 0 $smallest-rem-2;
+  height: 100%;
+  padding: 1.5rem 0;
+
+  .hold-text {
+    @include flex-colum;
+    @include auto-center;
+
+    button {
+      margin-top: 0.5rem;
+    }
+  }
+  .end {
+    margin: auto auto 0;
+
+    button {
+      width: 7rem;
+    }
+  }
+}
+.hold-every-pricing-plan {
+  margin-bottom: $brands-margin;
+  padding: 0 $medium-space-margin;
+}
+.hold-brands {
+  @include flex-row;
+}
+
+.part-one {
+  margin-top: $smallest-rem;
+  @include grid-3;
+
+  p {
+    margin: 0;
+  }
+  .user-image img {
+    margin-right: 0.5rem;
+    width: 35px;
+    height: 35px;
+  }
+}
+.testimonial-holder {
+  border: 1px solid map-get($colors, "gray-background");
+  padding: $smallest-rem;
+  border-radius: $small-pixel-radius;
+  margin: $smallest-rem 0;
+}
+.subscribe {
+  @extend .testimonial-holder;
+}
+.media {
+  @include flex-row;
+  div {
+    margin: $small-pixel-radius;
+  }
+}
+footer {
+  @include footer;
+  padding: $smallest-rem;
+}
+
+@media (min-width: 51.875em) {
+  nav {
+    grid-template-columns: 0.25fr 1fr;
+  }
+  section {
+    @include flex-row;
+  }
+  .hold-every-pricing-plan {
+    @include grid-3-identical;
+    align-items: flex-start;
+    gap: $small-pixel-radius;
+    .end {
+      bottom: 0;
+    }
+  }
+  .nav-icon {
+    display: none;
+  }
+  .plan,
+  .center-line,
+  .subscribe {
+    @include auto-center;
+    width: $rounded-radius;
+    text-align: $align-center;
+    margin-bottom: $smallest-rem;
+  }
+  .hold-every-pricing-plan {
+    margin: 0 0 $medium-space-margin;
+  }
+  .hold-pricing-plan {
+    margin: 0;
+    padding: 5px;
+  }
+  section .text-width {
+    h1,
+    h2,
+    p {
+      width: 80%;
+    }
+  }
+  .margin-left {
+    margin-left: $smallest-rem-2;
+  }
+  footer {
+    @include footer-desktop;
+    padding: $medium-space-margin $medium-space-margin 0;
+  }
+  .full {
+    width: 80%;
+  }
+  section,
+  .plan,
+  .hold-every-pricing-plan,
+  .hold-brands,
+  .center-line,
+  .testimonials,
+  .subscribe,
+  nav {
+    padding: 0 $medium-space-margin 0;
+  }
+  .nav-links {
+    @include flex-row;
+  }
+  nav .nav-links {
+    background-color: #ffffff;
+    position: static;
+    margin: 0 auto;
+    padding: 0;
+    .nav-link {
+      margin: 0 0.4rem;
+      padding: 0;
+    }
+  }
+  .nav-buttons button {
+    margin: 0 2px 0;
+    border: 0 solid #ffffff;
+    width: max-content;
+
+    &:hover {
+      border: 1px solid map-get($colors, "red-call-to-action");
+    }
+    button {
+      margin: 0;
+    }
+  }
+  .wrap-icon p {
+    margin: 0;
+  }
+
+  .testimonials {
+    display: inline-flex;
+    gap: $small-pixel-radius;
+    padding: $small-pixel-radius;
+    .testimonial-holder {
+      width: 30%;
+    }
+  }
+  .hold-pricing-plan {
+    padding: $smallest-rem;
+  }
+  .section-two {
+    margin-top: $medium-space-margin;
+    box-shadow: $blur;
+
+    .show-case {
+      padding: $smallest-rem;
+    }
+
+    .contain-vector {
+      margin-right: $smallest-rem-2;
+    }
+  }
+  .subscribe {
+    @include flex-row;
+    position: relative;
+    margin-bottom: -4rem;
+    width: 85%;
+    background-color: #ffffff;
+    padding: $brands-margin;
+
+    button {
+      @include auto-center;
+      width: 35%;
+    }
+    .call-to-action-text {
+      width: $rounded-radius;
+      text-align: left;
+    }
+  }
+
+  nav .logo {
+    display: grid;
+    align-content: center;
+  }
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 auto;
+    padding: $smallest-rem 0;
+  }
+}

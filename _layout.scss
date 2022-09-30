@@ -1,0 +1,57 @@
+@import "utility.scss";
+
+@mixin flex-row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+@mixin flex-colum {
+  display: flex;
+  flex-flow: column;
+}
+
+@mixin auto-center {
+  margin: 0 auto;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@mixin grid-3 {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+}
+@mixin grid-3-identical {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@mixin footer {
+  display: grid;
+  grid-template-areas:
+    "full full"
+    "one-half two-half"
+    "one-half two-half"
+    "full-2 full-2";
+  gap: $small-pixel-radius;
+}
+
+@mixin footer-desktop {
+  display: grid;
+  grid-template-areas: "full one-half two-half full-2";
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.full {
+  grid-area: full;
+}
+.one-half {
+  grid-area: one-half;
+}
+.two-half {
+  grid-area: two-half;
+}
+.full-2 {
+  grid-area: full-2;
+}
