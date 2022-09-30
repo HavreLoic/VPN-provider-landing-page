@@ -1,0 +1,2 @@
+# VPN-provider-landing-page
+inspired by a free figma design, I have the LeslesVPN design into code using Typescript, Sass. The design only being for desktop. I had to be creative to add a tablet and mobile design on my own, with a cool navbar toggle effect. I have made use of both flexbox and grid to make it responsive. There is a nice hover effect on the sign in and up buttons . Not being able to obtain the design social icons, I had to look for other ones and set its background color to red on others to keep the design consistent with the logo.
