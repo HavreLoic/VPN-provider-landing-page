@@ -14,7 +14,7 @@
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site URL](https://havreloic.github.io/VPN-provider-landing-page/)
 
 ### Built with
 
@@ -26,4 +26,4 @@
 
 ## Author
 
-- Website - [Havre Loic](https://www.your-site.com)
+- Website - [Havre Loic](https://havreloic.netlify.app/)
